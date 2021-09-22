@@ -3,20 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "api": "node ./api",
+    "serve": "vue-cli-service serve --port 3000",
     "dev": "concurrently \"npm run serve\" \"npm run studio\"",
     "build": "vue-cli-service build",
     "studio": "cd studio && npm run dev",
     "now-dev": "npm run dev"
   },
   "engines": {
-    "node": "12.x"
+    "node": ">12.x"
   },
   "dependencies": {
-    "@sanity/image-url": "^0.140.15",
     "@sanity/client": "^0.147.3",
+    "@sanity/image-url": "^0.140.15",
     "axios": "^0.19.0",
     "core-js": "^3.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "lodash": "^4.17.15",
     "micro": "^9.3.4",
     "micro-cors": "^0.1.1",

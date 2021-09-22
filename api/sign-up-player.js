@@ -10,6 +10,7 @@ const parse = async req => {
 }
 
 const handler = async (req, res) => {
+  console.log('afs')
   if (req.method === 'OPTIONS') {
     return send(res, 200, {status: 'ok'})
   }
